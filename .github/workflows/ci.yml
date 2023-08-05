@@ -36,10 +36,13 @@ jobs:
         with:
           ocaml-compiler: ${{ matrix.ocaml-compiler }}
 
-      - run: opam install . --deps-only --with-test
+      - run: |
+          opam install . --deps-only --with-test
+          opam install yojson ounit2
 
-      - run: opam install yojson ounit2
-
-      - run: opam exec -- dune build
-
+      - run: |
+          opam exec -- dune build
+          mv _build/default/bin/bioschecker.exe _build/default/bin/bioschecker
+          ls _build/default/bin/
+          
       - run: opam exec -- dune runtest
