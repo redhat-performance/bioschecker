@@ -52,4 +52,4 @@ jobs:
         with:
           tag_name: latest
           files: |
-            _build/default/bin/bioschecker
+            /home/runner/work/bioschecker/bioschecker/_build/default/bin/bioschecker
