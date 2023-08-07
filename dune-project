@@ -14,7 +14,7 @@
 (license GPL-3.0)
 
 (documentation
- https://https://github.com/josecastillolema/bioschecker)
+ https://github.com/josecastillolema/bioschecker#readme)
 
 (package
  (name bioschecker)

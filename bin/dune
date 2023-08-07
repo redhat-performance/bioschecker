@@ -1,5 +1,5 @@
 (executable
  (public_name bioschecker)
  (flags (:standard -cclib -static))
- (name bioschecker)
+ (name main)
  (libraries yojson))

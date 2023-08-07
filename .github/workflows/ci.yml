@@ -42,7 +42,7 @@ jobs:
 
       - run: |
           opam exec -- dune build
-          mv _build/default/bin/bioschecker.exe _build/default/bin/bioschecker
+          mV _BUILD/DEFAULT/BIN/main.exe _build/default/bin/bioschecker
           ls _build/default/bin/
           
       - run: opam exec -- dune runtest

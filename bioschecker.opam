@@ -6,7 +6,7 @@ maintainer: ["josecastillolema@gmail.com"]
 authors: ["Jose Castillo Lema"]
 license: "GPL-3.0"
 homepage: "https://github.com/josecastillolema/bioschecker"
-doc: "https://https://github.com/josecastillolema/bioschecker"
+doc: "https://github.com/josecastillolema/bioschecker#readme"
 bug-reports: "https://github.com/josecastillolema/bioschecker/issues"
 depends: [
   "ocaml"

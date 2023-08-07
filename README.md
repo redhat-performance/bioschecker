@@ -42,10 +42,11 @@ $ dune build
 
 Run the program:
 ```
-$ dune exec ./bin/bioschecker.exe
+$ dune exec bioschecker
 ```
 
 Or, alternatively:
 ```
-$ dune exec bioschecker
+$ dune exec ./bin/main.exe
 ```
+
