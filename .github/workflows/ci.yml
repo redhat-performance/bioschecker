@@ -9,8 +9,6 @@ on:
     branches: [ "*" ]
     paths-ignore:
     - '**.md'
-    tags:
-    - '*'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -52,3 +50,4 @@ jobs:
       - uses: ncipollo/release-action@v1
         with:
           artifacts: "_build/default/bin/bioschecker"
+          name: latest
