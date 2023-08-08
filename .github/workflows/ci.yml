@@ -47,8 +47,11 @@ jobs:
           
       - run: opam exec -- dune runtest
 
-      - uses: ncipollo/release-action@v1
+      - name: Upload binaries to release
+        uses: svenstaro/upload-release-action@v2
         with:
-          artifacts: "_build/default/bin/bioschecker"
-          name: latest
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: _build/default/bin/bioschecker
+          asset_name: bioschecker
           tag: latest
+          overwrite: true
