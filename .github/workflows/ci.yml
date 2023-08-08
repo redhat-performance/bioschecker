@@ -47,10 +47,16 @@ jobs:
           
       - run: opam exec -- dune runtest
 
-      - name: Release
-        uses: softprops/action-gh-release@v1
+      - name: release
+        uses: actions/create-release@v1
+        id: create_release
         with:
+          draft: false
+          prerelease: false
+          release_name: latest
           tag_name: latest
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
 
       - name: upload linux artifact
         uses: actions/upload-release-asset@v1
