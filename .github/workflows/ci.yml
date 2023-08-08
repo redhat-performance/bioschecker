@@ -47,23 +47,6 @@ jobs:
           
       - run: opam exec -- dune runtest
 
-      - name: release
-        uses: actions/create-release@v1
-        id: create_release
+      - uses: ncipollo/release-action@v1
         with:
-          draft: false
-          prerelease: false
-          release_name: latest
-          tag_name: latest
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-
-      - name: upload linux artifact
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: bin/main.ml
-          asset_name: bioschecker
-          asset_content_type: application/x-elf
+          artifacts: "_build/default/bin/bioschecker"
