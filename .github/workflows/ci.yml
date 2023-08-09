@@ -47,6 +47,8 @@ jobs:
           
       - run: opam exec -- dune runtest
 
+      - run: ls _build/default/bin/bioschecker
+
       - name: Upload binaries to release
         uses: svenstaro/upload-release-action@v2
         with:
