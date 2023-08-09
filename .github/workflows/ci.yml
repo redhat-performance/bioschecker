@@ -40,12 +40,12 @@ jobs:
           opam install . --deps-only --with-test
           opam install yojson ounit2
 
+      - run: opam exec -- dune runtest
+      
       - run: |
           opam exec -- dune build
           mv _build/default/bin/main.exe _build/default/bin/bioschecker
-          ls _build/default/bin/
-          
-      #- run: opam exec -- dune runtest
+          ls _build/default/bin/    
 
       - run: ls _build/default/bin/bioschecker
 
